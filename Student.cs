@@ -28,7 +28,7 @@
         Console.WriteLine($"Hello, my name is {name}, I am {age} years old, and my final grade is {finalGrade}.");
     }
     public string Name
-    {
+    {//properties area variable type thing to run code  
         get
         {
             if(age >=18)
