@@ -10,6 +10,7 @@
         this.name = name;
         this.age = age;
         this.finalGrade = finalGrade;
+        //public string lastName { get; set; };
     }
 
     public Student(string name, int age) :this(name, age,0)
@@ -26,25 +27,30 @@
     {
         Console.WriteLine($"Hello, my name is {name}, I am {age} years old, and my final grade is {finalGrade}.");
     }
-    public string GetName()
+    public string Name
     {
-        if(age >=18)
+        get
         {
-            return name;
-        }
-        else
-        {
-            return "This student is too young";
+            if(age >=18)
+            {
+                return name;
+            }
+            else
+            {
+                return "This student is too young";
+            }
         }
 
-    }
-    public void setName(string newName)
-    {
-        if(name != "")
+        set
         {
-            name = newName;
+            if(value != "")
+            {
+                name = value;
+            }
+
         }
     }
+    
     public int GetAge()
     {
         if (age >= 18)
