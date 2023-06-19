@@ -6,9 +6,9 @@
     private double finalGrade;//you only want the information from the constructor
       
       //auto imnplemented Property
-     public string LastName {get; set;}
+     public string LastName {get; private set;}
 
-    public Student(string name,string LastName, int age, double finalGrade)
+    public Student(string name,string lastName, int age, double finalGrade)
     {
         this.name = name;
         this.LastName = lastName;
@@ -18,7 +18,7 @@
        
     }
 
-    public Student(string name, int age) :this(name, lastName, age,0)
+    public Student(string name,string lastName, int age) :this(name, lastName, age,0)
     {
         //this is duplicating code and we can instead use a constructor initailizer
         //allows us to call another constructor from a constructor
