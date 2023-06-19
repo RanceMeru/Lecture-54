@@ -2,11 +2,11 @@
 {
      public static void Main(string[] args)
     {
-        Student s1 = new Student("Tom", 15,75);
+        Student s1 = new Student("Tom","Bob", 15,75);
         s1.Name ="Bob";
        Console.WriteLine(s1.Name);
-       s1.SetFinalGrade(105 );
-       Console.WriteLine(s1.GetFinalGrade());
+       s1.FinalGrade = 105;
+       Console.WriteLine(s1.FinalGrade);
     }//get and set functions act as constraints for a program to work how you want it to work
        
 }

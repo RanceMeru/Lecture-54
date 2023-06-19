@@ -4,16 +4,21 @@
     private int age;
     private string name;
     private double finalGrade;//you only want the information from the constructor
+      
+      //auto imnplemented Property
+     public string LastName {get; set;}
 
-    public Student(string name, int age, double finalGrade)
+    public Student(string name,string LastName, int age, double finalGrade)
     {
         this.name = name;
+        this.LastName = lastName;
         this.age = age;
         this.finalGrade = finalGrade;
-        //public string lastName { get; set; };
+       
+       
     }
 
-    public Student(string name, int age) :this(name, age,0)
+    public Student(string name, int age) :this(name, lastName, age,0)
     {
         //this is duplicating code and we can instead use a constructor initailizer
         //allows us to call another constructor from a constructor
@@ -51,39 +56,52 @@
         }
     }
     
-    public int GetAge()
+    
+    public int Age
     {
-        if (age >= 18)
+        get
         {
+             if (age >= 18)
+            {
             return age;
-        }
-        else 
-        {
+            }
+            else 
+            {
             return -1;
+            }
         }
-    }
-    public void setAge(int newAge)
-    {
-        if(newAge != 0)
+        set
         {
-            age = newAge;
+             if(value != 0)
+            {
+            age = value;
+            }
         }
     }
-    public double GetFinalGrade()
-    {
-        return finalGrade;
 
-    }
-    public void SetFinalGrade(double newFinalGrade)
-    {
-        if(newFinalGrade < 65)
+   
+   public double FinalGrade
+   {
+
+        get
         {
-            newFinalGrade = 65;
+            return finalGrade;
         }
-        else if (newFinalGrade > 100)
+
+        set
         {
-            newFinalGrade = 100;
+            if(value < 65)
+        {
+            value = 65;
         }
-        finalGrade = newFinalGrade;
-    }
+        else if (value > 100)
+        {
+            value = 100;
+        }
+        finalGrade = value;
+        }
+   }
+   
+    
+    
 }
