@@ -4,7 +4,7 @@
     private int age;
     private string name;
     private double finalGrade;//you only want the information from the constructor
-      
+      //using properties
       //auto imnplemented Property
      public string LastName {get; private set;}
 
